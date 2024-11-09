@@ -93,7 +93,7 @@ INSERT INTO PolicyTypes (PolicyTypeName, Description) VALUES
 
 # Analytical Queries
   Total Number of Claims per Policy Type
-        ```SQL
+    ```sql
         SELECT
             pt.PolicyTypeName,
             COUNT(c.ClaimID) AS TotalClaims
@@ -107,7 +107,7 @@ INSERT INTO PolicyTypes (PolicyTypeName, Description) VALUES
             pt.PolicyTypeName
         ORDER BY
             TotalClaims DESC;
-        ```
+    ```
 
 Monthly Claim Frequency and Average Claim Amount
 ```sql
@@ -147,8 +147,8 @@ CREATE INDEX idx_claims_claimdate ON Claims(ClaimDate);
 
 # Lessons Learned
   This project provided valuable experience in:
-   **-** Designing and normalizing database schemas
-   **-** Writing SQL queries for both operational and analytical purposes
+   **-** Designing and normalizing database schemas.
+   **-** Writing SQL queries for both operational and analytical purposes.
    **-** Indexing strategies for performance optimization
-   **-** Managing access control and user roles in a database environment
+   **-** Managing access control and user roles in a database environment.
 
