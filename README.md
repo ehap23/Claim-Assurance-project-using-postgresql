@@ -146,9 +146,12 @@ CREATE INDEX idx_claims_claimdate ON Claims(ClaimDate);
 
 
 # Lessons Learned
-  This project provided valuable experience in:
-   **-** Designing and normalizing database schemas.
-   **-** Writing SQL queries for both operational and analytical purposes.
-   **-** Indexing strategies for performance optimization
-   **-** Managing access control and user roles in a database environment.
+
+This project provided valuable experience in:
+
+- Designing and normalizing database schemas
+- Writing SQL queries for both operational and analytical purposes
+- Indexing strategies for performance optimization
+- Managing access control and user roles in a database environment
+
 
