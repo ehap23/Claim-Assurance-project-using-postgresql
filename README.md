@@ -92,22 +92,22 @@ INSERT INTO PolicyTypes (PolicyTypeName, Description) VALUES
 ```
 
 # Analytical Queries
-Total Number of Claims per Policy Type
-```sql
-SELECT
-    pt.PolicyTypeName,
-    COUNT(c.ClaimID) AS TotalClaims
-FROM
-    Claims c
-JOIN
-    Policies p ON c.PolicyID = p.PolicyID
-JOIN
-    PolicyTypes pt ON p.PolicyTypeID = pt.PolicyTypeID
-GROUP BY
-    pt.PolicyTypeName
-ORDER BY
-    TotalClaims DESC;
-```
+  Total Number of Claims per Policy Type
+        ```SQL
+        SELECT
+            pt.PolicyTypeName,
+            COUNT(c.ClaimID) AS TotalClaims
+        FROM
+            Claims c
+        JOIN
+            Policies p ON c.PolicyID = p.PolicyID
+        JOIN
+            PolicyTypes pt ON p.PolicyTypeID = pt.PolicyTypeID
+        GROUP BY
+            pt.PolicyTypeName
+        ORDER BY
+            TotalClaims DESC;
+        ```
 
 Monthly Claim Frequency and Average Claim Amount
 ```sql
@@ -133,8 +133,8 @@ CREATE INDEX idx_claims_claimdate ON Claims(ClaimDate);
 
 
 # Roles and Permissions
-   1- ClaimsAnalyst: Read-only access to claims and policies data.
-   2- ClaimsManager: Full access to claims data and ability to update policy information.
+   - **ClaimsAnalyst**: Read-only access to claims and policies data.
+   - **ClaimsManager**: Full access to claims data and ability to update policy information.
 
    ```sql
   CREATE ROLE ClaimsAnalyst LOGIN PASSWORD 'password1';
@@ -147,8 +147,8 @@ CREATE INDEX idx_claims_claimdate ON Claims(ClaimDate);
 
 # Lessons Learned
   This project provided valuable experience in:
-    1- Designing and normalizing database schemas
-    2- Writing SQL queries for both operational and analytical purposes
-    3- Indexing strategies for performance optimization
-    4- Managing access control and user roles in a database environment
+    - Designing and normalizing database schemas
+    - Writing SQL queries for both operational and analytical purposes
+    - Indexing strategies for performance optimization
+    - Managing access control and user roles in a database environment
 
